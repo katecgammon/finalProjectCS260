@@ -8,13 +8,13 @@
         </div>
       </router-link>
       <div class="title">
-        <h1>HIKE UTAH</h1>
+        <h1>HIKE PROVO</h1>
       </div>
     </div>
     <div class="navbar">
         <router-link to="/">Home</router-link>
         <router-link to="/admin">Add Hike</router-link>
-        <router-link to="/admin">Gallery</router-link>
+        <router-link to="/gallery">Gallery</router-link>
     </div>
   </div>
   <div class="content">

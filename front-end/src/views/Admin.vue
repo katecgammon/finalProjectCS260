@@ -1,6 +1,6 @@
 <template>
 <div class="admin">
-    <h1>The Admin Page!</h1>
+    <h1>Add, edit, or delete a hike!</h1>
     <div class="heading">
       <div class="circle">1</div>
       <h2>Add a hike!</h2>
@@ -28,7 +28,7 @@
     </div>
         <div class="heading">
       <div class="circle">2</div>
-      <h2>Edit/Delete an Item</h2>
+      <h2>Edit/Delete a hike!</h2>
     </div>
     <div class="edit">
       <div class="form">
@@ -40,6 +40,10 @@
       </div>
       <div class="upload" v-if="findItem">
         <input v-model="findItem.title">
+        <p></p>
+        <input v-model="findItem.location">
+        <p></p>
+        <input v-model="findItem.difficulty">
         <p></p>
         <input v-model="findItem.description">
         <p></p>

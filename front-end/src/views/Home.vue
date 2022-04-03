@@ -2,11 +2,13 @@
 <div class="home">
   <section class="hike-gallery">
     <div class="hike" v-for="hike in hikes" :key="hike.id">
-      <h2>{{hike.title}}</h2>
-      <h4>{{hike.location}}</h4>
-      <h4>{{hike.difficulty}}</h4>
-      <p>{{hike.description}}</p>
       <img :src="hike.path" />
+      <div class="words">
+        <h2>{{hike.title}}</h2>
+        <h4>{{hike.location}}</h4>
+        <h4>{{hike.difficulty}}</h4>
+        <p>{{hike.description}}</p>
+      </div>
     </div>
   </section>
 </div>
@@ -40,11 +42,17 @@ export default {
 </script>
 
 <style scoped>
-.image h2 {
+.hike h2 {
   font-style: italic;
+  font-size: 19px;
 }
+
+.hike h4 {
+  font-size: 16px;
+}
+
 p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Masonry */
@@ -55,17 +63,25 @@ p {
 }
 
 .hike-gallery {
-  column-gap: 1.5em;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.words {
+  padding-left: 20px;
 }
 
-.image {
+.hike {
   margin: 0 0 1.5em;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  row-gap: 1.5rem;
   width: 100%;
 }
 
-.image img {
-  width: 100%;
+.hike img {
+  width: 500px;
+  padding-bottom: 40px;
 }
 
 
